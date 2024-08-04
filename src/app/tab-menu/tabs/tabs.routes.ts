@@ -7,30 +7,30 @@ export const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'budgets',
         loadComponent: () =>
-          import('../tab1/tab1.page').then((m) => m.Tab1Page),
+          import('../budgets-operation/budgets.page').then((m) => m.budgetsPage),
       },
       {
-        path: 'tab2',
+        path: 'budgets_list',
         loadComponent: () =>
-          import('../tab2/tab2.page').then((m) => m.Tab2Page),
+          import('../budgets-list/budgets_list.page').then((m) => m.budgets_listPage),
       },
       {
-        path: 'tab3',
+        path: 'options',
         loadComponent: () =>
-          import('../tab3/tab3.page').then((m) => m.Tab3Page),
+          import('../options/options.page').then((m) => m.optionsPage),
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/budgets',
         pathMatch: 'full',
       },
     ],
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/budgets_list',
     pathMatch: 'full',
   },
 ];
